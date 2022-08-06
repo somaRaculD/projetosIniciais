@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="eCommerce,ideias,criatividade,inovação" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>eCommerce - Digital</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <p class="destaque">Negresco</p>
+            <input type="text" name="query" placeholder="O que procura ?">
+
+            <nav>
+                <ul>
+                    <li>
+                        <a name="home" href="pages/home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./pages/saibaMais.html">Saiba Mais</a>
+                    </li>
+                    <li>
+                        <a name="produtos" href="./pages/produtos.html">Produtos</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="content">
+            <div id="painel-apresentacao">
+                <aside>
+                    <img src="../static_contents/minhaFotoEmo.jpg" alt="">
+                </aside>
+                <section id="apresentacao-texto">
+                    <h1>O que você procura está aqui!</h1>
+                    <p>Com mais de 100.000 produtos vendidos nos consagramos a principal empresa do ramo de cuecas personalizadas.</p>
+                </section>
+            </div>
+        </main>
+        <section>
+            <div id="info">
+
+                <span>*Os produtos e preços são puramente ilustrativos e não refletem a realidade*</span>
+
+            </div>
+        </section>
+        <footer>
+            <p>Desenvolvido por <strong>D'L</strong><span><i></i></span></p>
+        </footer>
+    </div>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const injetarEm = document.querySelector('#content')
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link)
+                    .then(link => html = link.text())
+                    .then(html => injetarEm.innerHTML = html)
+                    .catch(Error => console.log(Error))
+            }
+        })
+    </script>
+</body>
+
+</html>
