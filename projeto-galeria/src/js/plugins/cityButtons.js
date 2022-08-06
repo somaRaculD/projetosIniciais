@@ -9,11 +9,11 @@ function filterByCity(city){
     $('[wm-city]').each(function(i,e){
         const isTarget = $(this).attributes('wm-city') === city || city === null
         if(isTarget){
-            $(this).parent().removeClass('d-none')
-            $(this).fadeIn(duration)
+            $(this).parent().removeClass('d-none') //desabilidado o display none dos elementos selecionados
+            $(this).fadeIn(duration) //animação durante as trocas
         }else{
             $(this).fadeOut(duration, () => {
-                $(this).parent().addClass('d-none')
+                $(this).parent().addClass('d-none') // habilidando o display none dos elementos
             })
         }
     })

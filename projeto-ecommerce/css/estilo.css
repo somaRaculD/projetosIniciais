@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+} 
+
+body {
+    background-color: #fff;
+    height: 120vh;
+}
+
+header {
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 2px 0.3rem #000;
+
+    background-color: hsl(300, 25%, 5%);
+    color: #fff;
+}
+
+header p {
+    margin: 4vw;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-grow: 2fr;
+}
+
+nav li {
+    padding: 5vw;
+    cursor: pointer;
+}
+
+nav li:hover::after {
+    content: "";
+    border-bottom: 1px solid;
+    z-index: 1;
+    display: block;
+    
+}
+
+main {
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+    overflow: hidden;
+}
+
+.box-main {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.card-box {
+    height: 25%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+    border-radius: 15px;
+    background-color: #ccc;
+    box-shadow: 1em 2em 2em #000;
+}
+
+#info {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:solid 1px hsl(0, 0%, 80%);
+    background-color: hsl(0, 15%, 90%);
+}
+
+input {
+    height: 35%;
+    width: 35%;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(25, 25, 25);
+    color: #fff;
+}
+
+#sumario {
+    height: 10vh;
+    width: 50%;
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.index_sumario {
+    padding: 1em;
+    background-color: #fff;
+    border: solid 1px;
+}
+
+.index_sumario:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.trocar_index {
+    margin: 0em 1em;
+}
+
+.card-box:hover {
+    cursor: pointer;
+    height: 28%;
+    width: 28%;
+    /* z-index: 8888; */ /* fica para analisars*/
+    background-color: hsl(0, 0%, 75%);
+    border: 2px solid #000;
+    transform: ease;
+}
+
+img {
+    height: 70%;
+    width: 85%;
+    padding: 1vh;
+    border-radius: 20px;
+}
+
+
